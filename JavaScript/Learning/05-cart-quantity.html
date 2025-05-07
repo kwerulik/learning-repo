@@ -17,27 +17,27 @@
   <button onclick="console.log(`Cart quantity: ${cartQuantity}`);">
     Show Quantity
   </button>
-  <button onclick="cartQuantity <= 9 ? cartQuantity++ : alert('Your cart is full!');">
+  <button onclick="updateCartQuantity(+1);">
     Add to cart
   </button>
-  <button onclick="cartQuantity <= 9 ? cartQuantity += 2 : alert('Your cart is full!');">
+  <button onclick="updateCartQuantity(+2);">
     +2
   </button>
-  <button onclick="cartQuantity <= 9 ? cartQuantity += 3 : alert('Your cart is full!');">
+  <button onclick="updateCartQuantity(+3);">
     +3
   </button>
-  <button onclick="cartQuantity <= 9 ? cartQuantity += 4 : alert('Your cart is full!');">
+  <button onclick="updateCartQuantity(+5);">
     +4
   </button>
-  <button onclick="cartQuantity <= 9 ? cartQuantity += 5 : alert('Your cart is full!');">
+  <button onclick="updateCartQuantity(+5);">
     +5
   </button>
-  <button onclick="cartQuantity >= 1 ? cartQuantity -- : alert('Your cart is empty!');">
+  <button onclick="updateCartQuantity(-1);">
     Remove from cart
   </button>
-    <button onclick="cartQuantity >= 2 ? cartQuantity -= 2 : alert('Your cart is empty!');">
+    <button onclick="updateCartQuantity(-2);">
       -2
-    </button><button onclick="cartQuantity >= 3 ? cartQuantity -= 3 : alert('Your cart is empty!');">
+    </button><button onclick="updateCartQuantity(-3);">
       -3
     </button>
 
@@ -49,6 +49,20 @@
   <script>
     let cartQuantity = 0;
     
+    function updateCartQuantity (change){
+      if (cartQuantity + change < 0) {
+        alert('Your cart is empty!');
+        return;
+      }
+      else if (cartQuantity + change > 10) {
+        alert('Your cart is full!');
+        return;
+      } 
+      else {
+        cartQuantity += change;
+        return console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    }
   </script>
 </body>
 <html>
