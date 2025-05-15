@@ -10,22 +10,16 @@
 <body>
   <p class="title">Rock paper Scissors</p>
 
-  <button class="move-button" onclick="
-    playGame('rock');
-  ">
+  <button class="move-button js-rock-button">
     <img src="./img/rock.png" alt="Rock emoji" class="move-icon">
   </button>
 
-  <button class="move-button" onclick="
-    playGame('paper');
-  ">
+  <button class="move-button js-paper-button">
     <img src="./img/paper.png" alt="Paper emoji" class="move-icon">
   </button>
 
-  <button class="move-button" onclick="
-    playGame('scissors');
-    ">
-    <img src="./img/scissors.png" alt="Scossors emoji" class="move-icon">
+  <button class="move-button js-scissors-button">
+    <img src="./img/scissors.png" alt="Scissors emoji" class="move-icon">
   </button>
 
   <p class='js-result result'></p>
@@ -33,16 +27,17 @@
   </p>
   <p class='js-score score'></p>
 
-  <button onclick="
-    score.wins = 0; 
-    score.losses = 0; 
-    score.ties = 0; 
-    localStorage.removeItem('score');
-    updateScoreElement(); 
-    
-  " class="reset-score-button">
+  <button class="reset-score-button">
     Reset Score
   </button>
+
+  <button class="auto-play-button">Auto play</button>
+
+  <div class="confirmation-container hidden">
+    <p class="js-confirmation-text">Are you sure you want to reste the score?</p>
+    <button class="js-yes-button">Yes</button>
+    <button class="js-no-button">No</button>
+  </div>
 
   <script src="./rock-paper-scissors.js"></script>
 </body>

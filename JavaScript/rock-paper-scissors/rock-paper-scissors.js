@@ -6,6 +6,59 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 
 updateScoreElement();
 
+let isAutoPlaying = false;
+let intervalId 
+
+function autoPlay() {
+  const buttonDisplay = document.querySelector('.auto-play-button')
+  if(!isAutoPlaying){
+    intervalId = setInterval(() => {
+      const playerMove = pickComputerMove()
+      playGame(playerMove)
+    },1000)
+    isAutoPlaying= true
+    buttonDisplay.innerHTML = 'Stop Playing'
+  } else {
+    clearInterval(intervalId)
+    isAutoPlaying = false
+    buttonDisplay.innerHTML = 'Auto Play'
+  }
+}
+
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+  playGame('rock')
+})
+
+document.querySelector('.js-paper-button').addEventListener('click', () => {
+  playGame('paper')
+})
+
+document.querySelector('.js-scissors-button').addEventListener('click', () => {
+  playGame('scissors')
+})
+
+document.body.addEventListener('keydown', (event) => {
+  if(event.key === 'r'){
+    playGame('rock')
+  } else if(event.key === 'p'){
+    playGame('paper')
+  } else if (event.key === 's') {
+    playGame('scissors')
+  } else if (event.key === 'a') {
+    autoPlay()
+  } else if (event.key === 'Backspace') {
+    resetScore()
+  }
+})
+
+document.querySelector('.auto-play-button').addEventListener('click', () => {
+  autoPlay();
+})
+
+document.querySelector('.reset-score-button').addEventListener('click', () => {
+  resetScore()
+})
+
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
   let result = "";
@@ -74,3 +127,23 @@ function pickComputerMove() {
 
   return computerMove;
 }
+
+function resetScore(){
+  const messageContainer = document.querySelector('.confirmation-container')
+  messageContainer.classList.remove("hidden");
+
+  document.querySelector('.js-yes-button').addEventListener('click', () => {
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem("score");
+    updateScoreElement(); 
+    messageContainer.classList.add("hidden");
+    return
+  })
+  document.querySelector('.js-no-button').addEventListener('click', () => {
+    messageContainer.classList.add('hidden')
+    return
+  }) 
+}
+
