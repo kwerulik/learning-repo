@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+    const stringArray1 = ['egg','hello', 'world', 'egg', 'search', 'good', 'egg']
+    const stringArray2 = ['egg', 'not', 'foulnd', 'not', ' laptop', 'egg', 'not']
+    
+    
+    function searchFunction(array, word){
+      for(let i = 0; i < array.length; i++){
+        if(array[i] === word){
+          return i
+        }
+      }  
+      return -1
+    }
+    console.log(searchFunction(stringArray1, 'good'))
+    console.log(searchFunction(stringArray2, 'not'))
+    console.log('')
+
+    function removeEgg(array){
+      const result = []
+      let eggCount = 0
+      for(let i =  array.length - 1; i > -1; i--){
+        if(array[i] === 'egg' && eggCount < 2){
+          eggCount++
+          continue
+        }
+        result.push(array[i])
+      }
+      result.reverse()
+      return result
+    }
+    console.log(stringArray1)
+    console.log(removeEgg(stringArray1))
+    console.log(removeEgg(stringArray2))
+    console.log('')
+
+    //for(let i = 1; i <= 20; i++){
+    //   if(i % 3 === 0 && i % 5 === 0){
+    //     console.log('FizzBuzz')
+    //     continue
+    //   } else if(i % 3 === 0){
+    //     console.log('Fizz')
+    //     continue
+    //   } else if(i % 5 === 0){
+    //     console.log('Buzz')
+    //     continue
+    //   } else {
+    //     console.log(i)
+    //   }
+    // }
+
+    function unique(array) {
+      const result = [];
+
+      for (let i = 0; i < array.length; i++) {
+        let exists = false;
+
+        for (let j = 0; j < result.length; j++) {
+          if (array[i] === result[j]) {
+            exists = true;
+            break;
+          }
+        }
+
+        if (!exists) {
+          result.push(array[i]);
+        }
+      }
+
+      return result;
+    }
+  console.log(unique(stringArray1))
+  console.log(unique(stringArray2))
+
+  </script>
+</body>
+</html>
