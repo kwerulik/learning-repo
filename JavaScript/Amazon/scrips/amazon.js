@@ -1,5 +1,3 @@
-import products from '../data/products'
-
 let productsHTML = ''
 
 products.forEach((product) => {
