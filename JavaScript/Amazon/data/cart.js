@@ -2,7 +2,7 @@ export let cart;
 loadFromStorage();
 
 export function loadFromStorage(){
-  cart = JSON.parse(localStorage.getItem('cart'))
+  cart = JSON.parse(localStorage.getItem('cart'));
   if(!cart) {
     cart = [
       {
@@ -64,18 +64,16 @@ export function getCartQuantity() {
   cart.forEach((cartItem) => {
     cartQuantity += cartItem.quantity;
   });
-
   return cartQuantity
 }
 
 export function updateQuantity(productId, newQuantity) {
   cart.forEach((cartItem) => {
     if(cartItem.productId === productId) {
-      cartItem.quantity = newQuantity
+      cartItem.quantity = newQuantity;
     }
   })
   saveToStorage()
-  console.log(cart)
 }
 
 export function updateDeliveryOption(productId, deliveryOptionId) {
