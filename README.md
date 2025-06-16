@@ -3,8 +3,8 @@
 This repository contains coding exercises and small projects I've completed while learning different programming languages and technologies.
 
 It includes work from:
-- 📚 **Online courses** (`JS/course/`, `html/course`)
-- 🎓 **University classes** (`JS/Uni/`, `basics-csharp-python/`,  `React/`, `basics-csharp-python`...)
+- 📚 **Online courses** (`javascript/course/`, `html/course`)
+- 🎓 **University classes** (`javascript/Uni/`, `basics-csharp-python/`,  `react/`, `basics-csharp-python`...)
 
 
 ## 📂 Folder Structure
@@ -14,10 +14,10 @@ It includes work from:
 ├── 📁 html/
 │   ├── 📁 course/             # online course
 │   └── 📁 Uni/                # university
-├── 📁 JavaScript/
+├── 📁 javascript/
 │   ├── 📁 course/             # online course
 │   └── 📁 Uni/                # university
-├── 📁 React/                  # university
+├── 📁 react/                  # university
 ├── 📁 basics-csharp-python/   # university
 │   ├── 📁 Python/
 │   └── 📁 C#/
@@ -31,9 +31,9 @@ It includes work from:
 
 | Folder                  | Description                                              |
 |-------------------------|----------------------------------------------------------|
-| `JS/course/`            | JavaScript exercises from online tutorials and courses   |
-| `JS/Uni/`               | JavaScript assignments from university classes           |
-| `React/`                | React projects and exercises (university-based)          |
+| `javascript/course/`    | JavaScript exercises from online tutorials and courses   |
+| `javascript/Uni/`       | JavaScript assignments from university classes           |
+| `react/`                | React projects and exercises (university-based)          |
 | `basics-csharp-python/` | Introductory labs in Python and C#                       |
 | `html`                  | HTML basics from university and online courses           |
 | `databases/`            | Database-related assignments, including NoSQL projects   |
