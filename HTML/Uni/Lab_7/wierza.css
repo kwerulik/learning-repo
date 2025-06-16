@@ -1,0 +1,6 @@
+@import url(kaszuby.css);
+.header, .menu li, a, .aside, .footer {
+  background-color: yellow;
+  color: black;
+  padding: 15px;
+}

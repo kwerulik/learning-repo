@@ -1,0 +1,11 @@
+<!-- ====== POCZĄTEK SLIDERA ======= -->
+		<div class="container call-to-action">
+			<div class="row">
+				<div class="col-xs-12">
+				<h2>Nie pozwól na marnowanie swojego talentu!</h2>
+				<a href="#" class="btn btn-default">Kup aplikację za 29.99$</a><br>
+				<a href="#" class="btn btn-link">Wypróbuj demo</a>
+				</div>
+			</div>	
+		</div>
+		<!-- ====== KONIEC SLIDERA ======= -->

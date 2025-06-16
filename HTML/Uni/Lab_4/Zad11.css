@@ -1,0 +1,44 @@
+.grid-container
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item1
+{
+    flex: 100%;
+    background-color: #297ddf;
+    color: white;
+}
+
+.grid-item2
+{
+    flex: 33%;
+    background-color: rgb(91, 91, 91);
+    color: white;
+}
+
+.grid-item3
+{
+    flex: 33%;
+    background-color: gray;
+}
+
+.grid-item4
+{
+    flex: 33%;
+    background-color: rgb(221, 221, 221);
+}
+
+.grid-item5
+{
+
+    flex: 100%;
+    color: white;
+    background-color: black;
+}
+
+div
+{
+    border: 0.5px solid black;
+}

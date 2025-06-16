@@ -1,0 +1,94 @@
+HTML - na podstawie FIGMY
+
+    NAVBAR
+        
+        Left - Logo+Nazwa
+
+        Right - Nav Links:
+            Home
+            What We Do
+            Service
+            Project
+            Blog
+            Contact
+
+        Split: L-40% / R-60%
+
+    SEGMENT 1 - photo + Text + button
+        
+        Left - Title + text + button
+
+        Right - Photo (left bottom corner rounded)
+
+        Background - 3 images
+
+        Split: L-33% / R-66%
+
+    SEGMENT 2 - logo bar
+
+        Flex Bar - 5 elementów - równe odległości
+            
+            El1 - Title + smalltext below title
+
+            El2-5 - Company Logo
+
+    SEGMENT 3 - Text + 4 cards
+
+        Left - Title + smalltext below
+
+        Right - CardMap
+            
+            Structure - smallempty element + 2cards + 2cards + smallempty element
+
+        Background - images to set up
+
+        Split L-33% / R-66%
+
+    SEGMENT 4 - Img + Text
+
+        Left - Img + small background img
+
+        Right - Title + text below + small background img
+
+        Split L-33% / R-66%
+
+CSS
+
+    Czcionka: didact gothic regular
+    
+    margin left-right dla Navbara, Seg2, Seg4 - 15%
+    
+    margin up-down dla każdego elementu poza Seg3 - 5%
+
+    paddingi i marginy Seg1 i Seg3 do ręcznego ustawienia
+
+
+
+    BREAKPOINTY: 768px/600px? + może 1080px?
+
+    Responsywność:
+
+        NAVBAR - bez zmian jeśli się zmieści
+
+        Seg1 - zmiana z wiersza na kolumnę
+
+        Seg2 - jeśli się zmieści to zwężenie z 1 wiersza na 2, jak nie to zmiana w kolumnę
+
+        Seg3 - zmiana w kolumnę
+
+        Seg4 - zmiana w kolumnę
+
+MEDIA
+
+    Zebrać i wrzucić do folderu
+        
+        1x img do Segmentu1
+
+        4x Logo do Seg2
+
+        4x small Img do Seg3
+
+        1x Img do Seg4
+
+        9x background img
+

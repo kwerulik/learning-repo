@@ -1,0 +1,21 @@
+<!-- ====== POCZĄTEK SLIDERA ======= -->
+		<div class="container features">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4">
+					<span class="glyphicon glyphicon-globe"></span>
+					<h3>Społeczność</h3>
+					<p>Udostępniaj swoje piękne zdjęcia wśród znajomych.<br>Zdobywaj popularność wśród fotografów.<br>Stań się kimś sławnym.</p>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<span class="glyphicon glyphicon-cloud"></span>
+					<h3>Dostępność</h3>
+					<p>Przechowuj dane w chmurze, dostępnej z każdego miejsca. Aplikacja synchronizuje się z tabletem, smartfonem i komputerem.</p>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<span class="glyphicon glyphicon-euro"></span>
+					<h3>Pieniądze</h3>
+					<p>Sprzedawaj swoje dzieła na całym świecie. <br>Agencje reklamowe będą zabijać się o Twoje usługi. <br>A Ty przy tym na pewno zarobisz.</p>
+				</div>
+			</div>	
+		</div>
+		<!-- ====== KONIEC SLIDERA ======= -->

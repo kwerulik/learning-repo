@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie2</title>
+</head>
+<body>
+    <form method="post" action="skrypt.php">
+        <label>Imie*<input type="text" name="Imie"  placeholder="Jan" required/></label><br />
+        <label>Nazwisko*<input type="text" name="Nazwisko" placeholder="Kowalski" required/></label><br />
+        <label>Numer Telefonu<input type="tel" name="tel" placeholder="666-010-101" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/></label><br />
+        <label>Numer Mieszkania<input type="number" placeholder="Podaj numer mieszkania" name="Mieszkanie" min="1" max="21"/></label><br />
+        <label>Data Urodzenia<input type="date" name="uro" min="1920-01-01" max="2020-01-01"/></label><br />
+
+        <input type="submit" value="Wyslij">
+    </form>
+</body>
+</html>

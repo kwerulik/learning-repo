@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie1</title>
+</head>
+<body>
+    <form method="post" action="skrypt.php">
+        Dane identyfikacyjne:
+        <fieldset name="dane identyfikacyjne">
+            Firma*<input type="text" name="Firma" required/><br />
+            Ulica<input type="text" name="Ulica"/><br />
+            Miejscowość<input type="text" name="Miejscowość"/><br />
+            Kod pocztowy<input type="text" name="Kod pocztowy"/><br />
+            NIP<input type="text" name="NIP"/><br />
+            WWW<input type="text" name="WWW"/><br />
+        </fieldset>
+
+        
+
+        Osoba kontakowa<fieldset name="osoba konatktowe">
+            Nazwisko*<input type="text" name="Nazwisko" required/><br />
+            Imie*<input type="text" name="Imie" required/><br />
+            Telefon*<input type="text" name="Tel" required/><br />
+            Kraj*
+            <select name="Kraj" required>
+                <option value="Polska">Polska</option>
+                <option value="Wielka Brytania">Wielka Brytania</option>
+                <option value="USA">USA</option>
+            </select><br />
+
+            Telefon kom.<input type="text" name="Komurkowy"/><br />
+            Faks<input type="text" name="Faks"/><br />
+            E-mail*<input type="text" name="E-mail"/><br />
+        </fieldset>
+
+
+        Informacje Dodatkowe<fieldset name="informacje doatkowe">
+            <p>Zakupy</p>
+            <label><input type="radio" name="Zakupy" value="Detaliczne">Detaliczne</label><br />
+            <label><input type="radio" name="Zakupy" value="Hurtowe"/>Hurtowe</label>
+
+            <p>Prowadze</p>
+            <label><input type="checkbox" name="Hurtownie">Hurtowe</label><br />
+            <label><input type="checkbox" name="Sklep">Sklep</label><br />
+            <label><input type="checkbox" name="punkt z akcesoriami GSM">Punkt z akcesoriami GSM</label><br />
+            <label><input type="checkbox" name="Salon">Salon</label><br />
+            <label><input type="checkbox" name="Inne">Inne<input type="text" name="Inne"></label><br />
+        </fieldset>
+    
+
+        Moja Główna Branża<fieldset name="moja głowna branża">
+            <label><input type="radio" name="Branża" value="GSM"/>GSM</label><br />
+            <label><input type="radio" name="Branża" value="RTV"/>RTV</label><br />
+            <label><input type="radio" name="Branża" value="komputerowa"/>komputerowa</label><br />
+            <label><input type="radio" name="Branża" value="drukarki"/>Materiały eskploatacyjne do drukarek</label><br />
+            <label><input type="radio" name="Branża" value="Inna"/>Inne<input type="text" name="Branża_inne"/></label><br /> 
+        </fieldset>
+
+
+        Dane konfiguracyjne<fieldset name="dane konfiguracyjne">
+            <label>Login*<input name="Login" required/></label><br />
+            <label>Hasło*<input type="password" name="Hasło" required></label><br />
+            <label>Powtórz Hasło*<input type="password" name="Pow_Hasło" required></label>
+        </fieldset>
+
+        <input type="submit" value="Wyślij"/>
+    </form>
+</body>
+</html>

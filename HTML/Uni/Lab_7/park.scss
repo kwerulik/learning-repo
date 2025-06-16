@@ -1,0 +1,11 @@
+@import url(kaszuby.css);
+
+
+$glowny-color: green;
+$napis: white; 
+
+.header, .menu li, a, .aside, .footer{
+    background-color: $glowny-color;
+    color: $napis;
+    padding: 15px;
+  }

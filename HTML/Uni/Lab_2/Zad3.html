@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie3</title>
+</head>
+<body>
+    <form method="post" action="skrypt.php">
+        <strong>Dane konatktowe</strong><br />
+
+        <label>E-mail*<input type="email" name="email" placeholder="marta@o2.pl" required/></label><br />
+        <label>Numer Telefonu<input type="tel" name="tel" placeholder="(058) 687-71-11" pattern="([0-9]{3})[0-9]{3}-[0-9]{2}-[0-9]{2}" required/></label><br />
+        <label>Hasło*<input type="password" name="Hasło" placeholder="123" min="8" required></label><br />
+        <label>Powtórz Hasło*<input type="password" name="Pow_Hasło" placeholder="123456" required></label><br />
+
+        <label><input type="checkbox" name="regulamin">Oświadczam, że zapoznałem się z <strong><a href="">regulaminem</a></strong> i akceptuje jego warunki</label><br />
+        <label><input type="checkbox" name="informacje">Chce otrzymywać informacje o promocjach i płatnościach w sklepie</label><br />
+
+
+        <input type="submit" value="Zarejestruj się">
+    </form>
+</body>
+</html>

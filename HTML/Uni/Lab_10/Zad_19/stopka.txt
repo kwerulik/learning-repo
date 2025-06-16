@@ -1,0 +1,11 @@
+<!-- ====== POCZĄTEK SLIDERA ======= -->
+		<div class="container footer">
+			<div class="row">
+				<div class="col-xs-12">
+				<p>Wszystkie prawa zastrzeżone. <strong>mój</strong>produkt &copy; 2015<br>
+				<small>kontakt@mojprodukt.pl</small>
+				</p>
+				</div>
+			</div>	
+		</div>
+		<!-- ====== KONIEC SLIDERA ======= -->

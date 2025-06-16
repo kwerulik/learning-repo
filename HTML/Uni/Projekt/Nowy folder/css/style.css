@@ -1,0 +1,157 @@
+/* Globalne style */
+body {
+    font-family: 'Didact Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15%;
+    background-color: #fff;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.segment1, .segment2, .segment3, .segment4 {
+    display: flex;
+    margin: 5% 15%;
+}
+
+.segment1 {
+    background-image: url('../img/background1.jpg'), url('../img/background2.jpg'), url('../img/background3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.segment1 .left {
+    width: 33%;
+    padding: 20px;
+}
+
+.segment1 .right {
+    width: 66%;
+}
+
+.segment1-img {
+    width: 100%;
+    border-bottom-left-radius: 15px;
+}
+
+.segment2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.segment2 h2 {
+    margin: 0;
+}
+
+.segment2 p {
+    margin: 5px 0 20px 0;
+}
+
+.logo-bar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.logo-bar .element {
+    margin: 0 20px;
+}
+
+.segment3 {
+    background-image: url('../img/background4.jpg'), url('../img/background5.jpg'), url('../img/background6.jpg'), url('../img/background7.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.segment3 .left {
+    width: 33%;
+}
+
+.segment3 .right {
+    width: 66%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.segment3 .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    height: 150px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.segment4 .left {
+    width: 33%;
+    position: relative;
+}
+
+.segment4 .right {
+    width: 66%;
+    padding: 20px;
+}
+
+.segment4 .segment4-img {
+    width: 100%;
+}
+
+.segment4 .small-background-img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 1080px) {
+    nav.navbar, .segment1, .segment2, .segment4 {
+        margin: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-right a {
+        margin-left: 10px;
+    }
+}
+
+    .segment1 {
+        flex-direction: column;
+    }
+
+    .segment1 .left, .segment1 .right {
+        width: 100%;
+    }
+
+   

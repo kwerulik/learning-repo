@@ -1,0 +1,76 @@
+.option
+{
+    float: left;
+    min-width: 50px;
+    height: 25px;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px dotted #444444;
+    opacity: 0.8;
+    width: auto;
+}
+
+.option:hover
+{
+    background-color: #000000;
+    cursor: pointer;
+}
+
+#Logo
+{
+    border: 1px solid black;
+    text-align: left;
+    height: 25px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#Menu
+{
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(85, 141, 213);
+    text-align: left;
+    height: 47px;
+}
+
+#Zaloguj
+{
+    background-color: rgb(199, 216, 241);
+    border: 1px solid black;
+    height: 25px;
+    text-align: right;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#PierwszyBoczny
+{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;  
+    background-color: white;
+    width: 200px;
+    height: 300px;
+    float: left;
+}
+
+#ObszarRoboczy
+{
+    border-bottom: 1px solid black;
+    background-color: rgb(217, 217, 217);
+    height: 300px;
+    width: auto;
+    /* float: left; */
+}
+
+#DrugiBoczny
+{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    background-color: white;
+    width: 200px;
+    height: 300px;
+    float: right;
+}

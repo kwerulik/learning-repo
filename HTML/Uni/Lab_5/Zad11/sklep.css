@@ -1,0 +1,52 @@
+body
+{
+    background-image: url(logo.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.flex-container-strony
+{
+    display: flex;
+    flex-direction: column;
+    background-color: DodgerBlue; 
+    width: 10%; 
+    position: relative;
+    height: auto;
+}
+
+.item
+{
+    background-color: #f1f1f1;
+    height: 20%;
+    margin: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;  
+}
+
+.item:hover
+{
+    color: white;
+    background-color: rgb(66, 64, 64);
+}
+
+.zawartosc
+{
+    content: right;
+    width: 70%;
+    align-items: end;
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: white;
+    text-decoration: none;
+}

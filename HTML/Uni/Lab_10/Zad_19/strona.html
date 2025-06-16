@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="C:\Users\kweru\Desktop\IiE(drugi_semestr)\Projektowanie Serwisów internetowych\Lab_10\Zad_19\bootstrap.min.css" rel="stylesheet">
+    <link href="C:\Users\kweru\Desktop\IiE(drugi_semestr)\Projektowanie Serwisów internetowych\Lab_10\Zad_19\r05.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,500italic&subset=latin,latin-ext' rel='stylesheet'>
+    
+    <title>Bootstrap - Projekt startowy</title>
+</head>	
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" 
+                data-toggle="collapse" 
+                data-target="#mainmenu" 
+                aria-expanded="false">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <strong>Dieta</strong>Fit
+                </a>
+            </div>
+            
+            <div class="collapse navbar-collapse navbar-right mainmenu">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Start</a></li>
+                    <li><a href="#">Demo</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#" class="btn btn-default">Kup teraz</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid main-photo">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2 caption">
+                        <h1>Osiągnij Zdrową Dietę z Naszą Aplikacją</h1>
+                        <p>Nasza aplikacja pomoże Ci planować zdrowe posiłki i osiągać swoje cele żywieniowe.</p>
+                        <p>Mobilny asystent dietetyczny już teraz za <br><strong>29.99ZŁ</strong></p>
+                        <a href="#" class="btn btn-default">Kup teraz</a>
+                        <a href="#" class="btn btn-link">Wypróbuj za darmo</a>
+                    </div>
+                </div>
+            </div>
+        </div>	
+    </div>
+
+    <div class="container features">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <span class="glyphicon glyphicon-apple"></span>
+                <h3>Zdrowe Posiłki</h3>
+                <p>Odkryj zdrowe i smaczne przepisy, które dostarczą Ci niezbędnych składników odżywczych.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <span class="glyphicon glyphicon-heart"></span>
+                <h3>Zdrowie i Dobrze Samopoczucie</h3>
+                <p>Pomóż swojemu ciału osiągnąć optymalne zdrowie i energię poprzez zdrowe nawyki żywieniowe.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <span class="glyphicon glyphicon-check"></span>
+                <h3>Monitorowanie Postępów</h3>
+                <p>Śledź swoje postępy w osiąganiu celów zdrowotnych i utrzymuj motywację do zdrowego odżywiania.</p>
+            </div>
+            
+            
+        </div>	
+    </div>
+
+    <div class="container features">
+        <div class="row">
+            <div class="col-xs-12">
+            
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Wskaźniki -->
+                    <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Slajdy -->
+                    <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="product4.jpg" alt="Apple">
+                        <div class="carousel-caption">
+                            Jabłko -> coś na szybką przekąske
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="product2.jpg" alt="orange">
+                        <div class="carousel-caption">
+                            Cytrusy - idealne na świerzy i pełny witamin sok<br>
+                            Szczególnie na lato
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="product3.jpg" alt="Berrys">
+                        <div class="carousel-caption">
+                            Mailni i jagoty, najlepej nadają się na przyszny deser 
+                        </div>
+                    </div>
+                    </div>
+
+					<!-- Strzałki -->
+					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Poprzednie</span>
+                    </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Następne</span>
+                    </a>
+                    </div>
+                    
+                    </div>
+                </div>	
+            </div>
+
+    <div class="container call-to-action">
+        <div class="row">
+            <div class="col-xs-12">
+            <h2>Zacznij zdrowo jeść już dziś!</h2>
+            <a href="#" class="btn btn-default">Kup aplikację za 29.99ZŁ</a><br>
+            <a href="#" class="btn btn-link">Wypróbuj demo</a>
+            </div>
+        </div>	
+    </div>
+
+    <div class="container footer">
+        <div class="row">
+            <div class="col-xs-12">
+            <p>Wszystkie prawa zastrzeżone. <strong>Dieta</strong>fit &copy; 2015<br>
+            <small>kontakt@dietafit.pl</small>
+            </p>
+            </div>
+        </div>	
+    </div>
+    
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="r05.js"></script>
+    
+</body>
+</html>
