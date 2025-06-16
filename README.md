@@ -1,14 +1,12 @@
-# Simple Web Projects – Learning Portfolio
+# learning-repo
 
-This repository contains a collection of simple web development projects created while following online courses and university lectures. The primary goal was to practice and reinforce foundational concepts in web development.
+This repository contains coding exercises and small projects I've completed while learning different programming languages and technologies.
 
 ## 📁 Project Structure
 
-- `calculator/` – A basic calculator implemented using HTML, CSS, and JavaScript.
-- `form-validation/` – A simple form with client-side validation.
-- `responsive-layout/` – A responsive webpage layout using Flexbox and Grid.
-- `todo-app/` – A to-do list application with add and delete functionalities.
-- `weather-widget/` – A widget displaying weather information fetched from an API.
+
+- `tutorials/`: tasks and code from online courses
+- `university/`: assignments and projects from my university studies
 
 ## 🎯 Purpose
 
