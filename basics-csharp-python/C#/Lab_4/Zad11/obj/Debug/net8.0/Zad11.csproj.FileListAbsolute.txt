@@ -1,0 +1,14 @@
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\bin\Debug\net8.0\Zad11.exe
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\bin\Debug\net8.0\Zad11.deps.json
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\bin\Debug\net8.0\Zad11.runtimeconfig.json
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\bin\Debug\net8.0\Zad11.dll
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\bin\Debug\net8.0\Zad11.pdb
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\obj\Debug\net8.0\Zad11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\obj\Debug\net8.0\Zad11.AssemblyInfoInputs.cache
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\obj\Debug\net8.0\Zad11.AssemblyInfo.cs
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\obj\Debug\net8.0\Zad11.csproj.CoreCompileInputs.cache
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\obj\Debug\net8.0\Zad11.dll
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\obj\Debug\net8.0\refint\Zad11.dll
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\obj\Debug\net8.0\Zad11.pdb
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\obj\Debug\net8.0\Zad11.genruntimeconfig.cache
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_4\Zad11\obj\Debug\net8.0\ref\Zad11.dll

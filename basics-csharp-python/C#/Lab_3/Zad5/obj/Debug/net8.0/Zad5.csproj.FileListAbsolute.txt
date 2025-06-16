@@ -1,0 +1,4 @@
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_3\Zad5\obj\Debug\net8.0\Zad5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_3\Zad5\obj\Debug\net8.0\Zad5.AssemblyInfoInputs.cache
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_3\Zad5\obj\Debug\net8.0\Zad5.AssemblyInfo.cs
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_3\Zad5\obj\Debug\net8.0\Zad5.csproj.CoreCompileInputs.cache

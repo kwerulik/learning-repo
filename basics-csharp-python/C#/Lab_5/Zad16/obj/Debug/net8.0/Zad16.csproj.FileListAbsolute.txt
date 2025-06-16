@@ -1,0 +1,14 @@
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\bin\Debug\net8.0\Zad16.exe
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\bin\Debug\net8.0\Zad16.deps.json
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\bin\Debug\net8.0\Zad16.runtimeconfig.json
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\bin\Debug\net8.0\Zad16.dll
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\bin\Debug\net8.0\Zad16.pdb
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\obj\Debug\net8.0\Zad16.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\obj\Debug\net8.0\Zad16.AssemblyInfoInputs.cache
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\obj\Debug\net8.0\Zad16.AssemblyInfo.cs
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\obj\Debug\net8.0\Zad16.csproj.CoreCompileInputs.cache
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\obj\Debug\net8.0\Zad16.dll
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\obj\Debug\net8.0\refint\Zad16.dll
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\obj\Debug\net8.0\Zad16.pdb
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\obj\Debug\net8.0\Zad16.genruntimeconfig.cache
+C:\Users\kweru\Desktop\IiE(drugi_semestr)\Wstep do programowania\Cwiczenia\Lab_5\Zad16\obj\Debug\net8.0\ref\Zad16.dll
