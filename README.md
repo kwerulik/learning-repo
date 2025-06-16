@@ -9,21 +9,7 @@ It includes work from:
 
 ## 📂 Folder Structure
 
-learning-repo/
-├── html/
-│ └── course/              #online course
-│ └── Uni/                 #university
-├── JavaScript/
-│ ├── course/              #online course
-│ └── Uni/                 
-├── React/                 #university
-├── basics-csharp-python/  #university
-│ └── Python/
-│ └── C#
-├── databases/             #university
-│ └── nosql/
-│ └── sql
-└── README.md
+<pre lang="markdown"> ```plaintext 📁 Folder Structure learning-repo/ ├── html/ │ ├── course/ # online course │ └── Uni/ # university ├── JavaScript/ │ ├── course/ │ └── Uni/ ├── React/ # university ├── basics-csharp-python/ # university │ ├── Python/ │ └── C#/ ├── databases/ │ ├── nosql/ │ └── sql/ └── README.md ``` </pre>
 
 ## 🧭 Folder Descriptions
 
