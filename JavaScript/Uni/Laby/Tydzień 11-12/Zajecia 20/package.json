@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "experss": "^0.0.1-security",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

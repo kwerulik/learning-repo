@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waluty i </title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .tables-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 300px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+
+        .logo {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logo img {
+            max-width: 150px;
+        }
+
+        .flag {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kursy Złota i Walut</h2>
+        
+        <div class="tables-container">
+            <div>
+                <h3>Kursy Złota - Ostatnie 5 dni</h3>
+                <table id="gold-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Cena Złota (PLN/g)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dane o kursach złota zostaną tutaj załadowane przez JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3>Dzisiejsze Kursy Walut</h3>
+                <table id="currency-table">
+                    <thead>
+                        <tr>
+                            <th>Waluta</th>
+                            <th>Kurs (PLN)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dane o kursach walut zostaną tutaj załadowane przez JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="logo_NBP.jpeg">
+        </div>
+    </div>
+
+
+
+    <script>
+            
+        document.addEventListener("DOMContentLoaded", function() {
+
+        const goldApiUrl = 'https://api.nbp.pl/api/cenyzlota/last/5/?format=json';
+
+        // Pobieramy dane o kursach złota
+        fetch(goldApiUrl)
+            .then(response => {
+                // Sprawdzamy, czy odpowiedź jest prawidłowa
+                if (!response.ok) {
+                    throw new Error('Błąd HTTP: ' + response.status);
+                }
+                // Konwertujemy odpowiedź na format JSON
+                return response.json();
+            })
+            .then(data => {
+                // Znajdujemy element `tbody` tabeli, do której dodamy dane o kursach złota
+                const tableBody = document.getElementById("gold-table").querySelector("tbody");
+
+                // Iterujemy po każdym elemencie danych (każdym kursie złota)
+                data.forEach(item => {
+                    // Tworzymy nowy wiersz tabeli
+                    const row = document.createElement("tr");
+
+                    // Tworzymy komórkę z datą
+                    const dateCell = document.createElement("td");
+                    dateCell.textContent = item.data; // Ustawiamy zawartość komórki
+
+                    // Tworzymy komórkę z ceną złota
+                    const priceCell = document.createElement("td");
+                    priceCell.textContent = item.cena.toFixed(2) + " PLN"; // Zaokrąglamy cenę do dwóch miejsc po przecinku
+
+                    // Dodajemy komórki do wiersza
+                    row.appendChild(dateCell);
+                    row.appendChild(priceCell);
+
+                    // Dodajemy wiersz do `tbody`
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                // Obsługujemy ewentualne błędy i wyświetlamy komunikat w konsoli
+                console.error("Wystąpił błąd przy pobieraniu kursów złota:", error);
+                const tableBody = document.getElementById("gold-table").querySelector("tbody");
+                tableBody.innerHTML = `<tr><td colspan="2">Nie udało się pobrać danych. Spróbuj ponownie później.</td></tr>`;
+            });
+        });
+
+
+        //DODAWANIE WALUTY
+        const currencyApiUrl = 'https://api.nbp.pl/api/exchangerates/tables/A/?format=json';
+
+        fetch(currencyApiUrl)
+            .then(response => {
+                // Sprawdzamy, czy odpowiedź jest prawidłowa
+                if (!response.ok) {
+                    throw new Error('Błąd HTTP: ' + response.status);
+                }
+                // Konwertujemy odpowiedź na format JSON
+                return response.json();
+            })
+            .then(data => {
+                // Znajdujemy element `tbody` tabeli, do której dodamy dane o kursach walut
+                const tableBody = document.getElementById("currency-table").querySelector("tbody");
+                // Definiujemy interesujące nas waluty
+                const currencies = ["USD", "GBP", "EUR"];
+            
+                // Iterujemy po każdej stawce walutowej
+                data[0].rates.forEach(rate => {
+                    // Sprawdzamy, czy waluta jest wśród wybranych (USD, GBP, EUR)
+                    if (currencies.includes(rate.code)) {
+                        // Tworzymy nowy wiersz tabeli
+                        const row = document.createElement("tr");
+                        console.log("tak")
+                        //Komórka z nazwą waluty
+                        const currencieCell = document.createElement("td");
+                        currencieCell.textContent = rate.currency + " (" + rate.code + ")";
+
+                        //
+
+                        //Komórka z cena waluty
+                        const midCell = document.createElement("td");
+                        midCell.textContent = rate.mid.toFixed(2) + "PLN";
+
+                        //Dodajemy komurki do wiersza
+                        row.appendChild(currencieCell);
+                        row.appendChild(midCell);
+                    
+                        //Dodajemy wiersz do 'tbody'
+                        tableBody.appendChild(row);
+                    };
+                })
+            })
+            .catch(error => {
+                    // Obsługujemy ewentualne błędy i wyświetlamy komunikat w konsoli
+                    console.error("Wystąpił błąd przy pobieraniu kursów waluty:", error);
+                    const tableBody = document.getElementById("currency-table").querySelector("tbody");
+                    tableBody.innerHTML = `<tr><td colspan="2">Nie udało się pobrać danych. Spróbuj ponownie później.</td></tr>`;
+            });
+
+
+    </script>
+    
+</body>
+</html>

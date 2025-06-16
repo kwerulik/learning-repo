@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="date" id = "date">
+    <button onclick="checkDate()"> Submit</button>
+    <p id="resultDate"> </p>
+
+    <script>
+        function checkDate(){
+            let dateInput = document.getElementById("date").value;
+            let result;
+            
+            if(!dateInput){
+                document.getElementById('resultDate').innerHTML = "Wybierz date";
+            }
+
+            let date = new Date(dateInput);
+            let day = date.getDate();
+            let mm = date.getMonth() + 1;
+            let year = date.getFullYear(); 
+
+            console.log(date);
+            console.log(day);
+            console.log(mm);
+            console.log(year);
+
+
+            let current = new Date();
+            let currYear = current.getFullYear();
+            let currMm = current.getMonth() + 1;
+            let currDay = current.getDate();
+
+            console.log(current);
+            console.log(currDay);
+            console.log(currMm);
+            console.log(currYear);
+
+            let wiek = currYear - year;
+
+            if (mm > currMm || (currMm === mm && day > currDay)){
+                wiek--;
+            }
+
+            if(wiek < 18){
+                result = "Nie Pełnoletni";
+            }
+            else{
+                result = "Pełnoletni";
+            }
+
+            if(day == currDay, mm == currMm, currYear - 18 == year){
+                result = "Wszystkiego Najlepszego";
+            }
+            document.getElementById('resultDate').innerHTML = result;
+        
+        }
+
+    </script>
+    
+    <input type="text" id = "NIP" maxlength="10">
+    <button onclick="checkNIP()"> Submit</button>
+    <p id="resultNIP"> </p>
+
+    <script>
+        function checkNIP(){
+            const NIP = document.getElementById("NIP").value;
+            const weights = [6, 5, 7, 2, 3, 4, 5, 6, 7];
+            const len = 10;
+
+            if (NIP.length !== len){
+                document.getElementById("resultNIP").innerHTML = "NIP musi mieć 10 cyfr";
+                return;
+            }
+
+            let sum = 0;
+            for (let i = 0; i < weights.length; i++){
+                sum += parseInt(NIP[i]) * weights[i];
+            }
+
+            const lastNumber = parseInt(NIP[9]);
+            const modulo = sum % 11;
+
+            if (modulo == lastNumber){
+                document.getElementById("resultNIP").innerHTML = "NIP jest poprawny";
+            }
+            else{
+                document.getElementById("resultNIP").innerHTML = "NIP jest niepoprawny";
+            }
+        }
+    </script>
+</body>
+</html>

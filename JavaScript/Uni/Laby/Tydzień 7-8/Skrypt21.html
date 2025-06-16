@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Testowanie API</title>
+</head>
+<body>
+    <h2>Odpowiedź z API:</h2>
+    <pre id="response"></pre>
+
+    <script>
+        // URL endpointu API
+        const endpoint = 'http://localhost/index.php';
+
+        // Wysłanie żądania do API
+        fetch(endpoint)
+            .then(response => response.json())
+            .then(data => {
+                // Wyświetlenie odpowiedzi na stronie
+                const name = data.data.name;
+                const email = data.data.email;
+
+                // Wyświetlenie tych danych na stronie
+                const responseElement = document.getElementById('response');
+                responseElement.textContent = `Imie: ${name}\nEmail: ${email}`;
+            })
+            .catch(error => {
+                console.error('Błąd:', error);
+            });
+    </script>
+</body>
+</html>
+<!-- <?php
+// Ustawienie nagłówków HTTP
+header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
+
+// Parametry połączenia z bazą danych
+$host = 'localhost';
+$dbname = 'test_api';
+$username = 'root'; // domyślny użytkownik w XAMPP
+$password = ''; // domyślne hasło jest puste w XAMPP
+
+// Tworzenie połączenia z bazą danych
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Wykonanie zapytania SQL
+    $stmt = $pdo->query("SELECT name, email FROM users LIMIT 1");
+
+    // Sprawdzenie, czy dane zostały znalezione
+    if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        // Zwrócenie danych w odpowiedzi
+        echo json_encode([
+            "status" => "success",
+            "data" => [
+                "name" => $row['name'],
+                "email" => $row['email']
+            ]
+        ]);
+    } else {
+        echo json_encode([
+            "status" => "error",
+            "message" => "Brak danych w bazie"
+        ]);
+    }
+} catch (PDOException $e) {
+    // Obsługa błędu połączenia z bazą danych
+    echo json_encode([
+        "status" => "error",
+        "message" => "Błąd połączenia z bazą danych: " . $e->getMessage()
+    ]);
+}
+?> -->

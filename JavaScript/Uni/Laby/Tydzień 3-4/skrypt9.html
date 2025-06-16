@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id = "NIP" maxlength="10">
+    <button onclick="checkNIP()"> Submit</button>
+    <p id="resultNIP"> </p>
+
+    <script>
+            class Car {
+            constructor(brand, model, year) {
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+
+            displayInfo() {
+                console.log(`Car: ${this.brand} ${this.model}, Year: ${this.year}`);
+            }
+        }
+        const myCar = new Car("Toyota", "Corolla", 2020);
+        myCar.displayInfo();
+    </script>
+</body>
+</html>

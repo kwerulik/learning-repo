@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form id="product-form">
+            <label for="name">Nazwa produktu:</label><br>
+            <input type="text" id="name" placeholder="Wprowadź nazwę produktu" required><br>
+    
+            <label for="price">Cena produktu:</label><br>
+            <input type="number" id="price" placeholder="Wprowadź cenę produktu" required><br>
+    
+            <button type="submit">Dodaj do koszyka</button>
+        </form>
+
+        <div id="cart-items"></div>
+        <div class="total-cost">
+            <strong>Łączna cena:</strong> <span id="total-cost">0</span> zł
+        </div>
+    </div>
+    <script>
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+        }
+    
+        class ShoppingCart {
+            constructor() {
+                this.items = [];
+            }
+            addProduct(product) {
+                this.items.push(product);
+            }
+    
+            totalCost() {
+                return this.items.reduce((total, product) => total + product.price, 0);
+            }
+    
+            displayCart() {
+                const cartItemsDiv = document.getElementById('cart-items');
+                cartItemsDiv.innerHTML = ''; // Wyczyść poprzednie produkty
+    
+                this.items.forEach((product, index) => {
+                    const productDiv = document.createElement('div');
+                    productDiv.textContent = `${index + 1}. ${product.name} - ${product.price} zł`;
+                    cartItemsDiv.appendChild(productDiv);
+                });
+
+                document.getElementById('total-cost').textContent = this.totalCost();
+            }
+        }
+
+        const cart = new ShoppingCart();
+    
+        // Obsługa formularza dodawania produktu
+        document.getElementById('product-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Zapobieganie przeładowaniu strony
+    
+            // Pobranie wartości z formularza
+            const name = document.getElementById('name').value;
+            const price = parseFloat(document.getElementById('price').value);
+    
+            // Utworzenie nowego produktu i dodanie do koszyka
+            const product = new Product(name, price);
+            cart.addProduct(product);
+    
+            // Wyświetlenie produktów w koszyku i łącznej ceny
+            cart.displayCart();
+    
+            // Wyczyść formularz po dodaniu produktu
+            document.getElementById('product-form').reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- skrypt 2 -->
+    <input type="number" id="getNumbers" placeholder="Podaj ciąg 7 cyfr">
+    <button onclick="MaxNumber()"> Find Max </button>
+    <p id="result"></p><br>
+    <script>
+        function MaxNumber(){
+            let input = document.getElementById("getNumbers").value;
+
+            let max = input[0];
+
+            for(let i = 0; i < 7 ; i++){
+                if (input[i] > max){
+                    max = input[i];
+                }
+            }
+            document.getElementById('result').innerHTML = max;
+        }
+    </script>
+
+    <!-- skrypt 3 -->
+
+    <input type="number" id="getElement" placeholder="Szukany element Fibonaciego">
+    <button onclick="calculateFibonacci()"> Find Fibonacci </button>
+    <p id="resultFibonacci"></p>
+    <script>
+        function calculateFibonacci(){
+            let input = document.getElementById("getElement").value;
+            let a = 0;
+            let b = 1;
+
+            for(let i = 0; i < input; i++){
+                b = a + b;
+                a = b - a;
+            }
+            
+            document.getElementById('resultFibonacci').innerHTML = a;
+        }
+    </script>
+
+    <!-- Strypt 4 -->
+
+        <input type="number" id="num1" placeholder="a">
+        <br>
+        <input type="number" id="num2" placeholder="b">
+        <button onclick="NWD()">Find NWD</button>
+        <p id="resultNWD"></p>
+
+
+    <script>
+        function NWD(){
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+            let result;
+            console.log(a,b);
+            let c;
+            while (b != 0)
+            {                
+                c = a % b;
+                a = b;
+                b = c;
+
+            }
+
+            result = a;
+            document.getElementById('resultNWD').innerHTML = result;
+        }
+    </script>
+
+    <!-- skrypt 5 -->
+
+    <input type="text" id="tab">
+    <button onclick="uniqueTab()">Find unique table</button>
+    <p id="resultTab"></p>
+
+
+    <script>
+        function uniqueTab(){
+            let array = document.getElementById("tab").value;
+
+            let uniqueArray = [];
+            let x = 0;
+            let y;
+
+            console.log(array);
+            for(let i = 0; i < array.length; i++) {
+                x = 0;
+                for (let j = 0; j < array.length; j++){
+
+                    console.log(array[i], uniqueArray[j]);
+                    if (array[i] == uniqueArray[j]){
+                        x ++;
+                        console.log("asasd");
+                    }
+                }
+                if (x == 0){
+                    uniqueArray.push(array[i]);
+                }
+                 
+            }
+
+            document.getElementById('resultTab').innerHTML = uniqueArray.join(',');
+        }
+    </script>
+
+    <!-- skrypt 6 -->
+
+    
+    <input type="text" id="tab">
+    <input type="text" id="tab2">
+    <button onclick="sameTab()">Find unique table</button>
+    <p id="resultSameTab"></p>
+
+
+    <script>
+        function sameTab(){
+            let array1 = document.getElementById("tab1").value;
+            let array2 = document.getElementById("tab2").value;
+            let uniqueArray = [];
+            
+            for(let i = 0; i < array1.length; i++){
+                
+            }
+
+
+
+            document.getElementById('resultTab').innerHTML = uniqueArray.join(',');
+        }
+    </script>
+
+</body>
+</html>

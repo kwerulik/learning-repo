@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket Chat</title>
+</head>
+<body>
+  <div>
+    <div id="chat"></div>
+    <input type="text" id="messageInput" placeholder="Wpisz wiadomość...">
+    <button id="sendButton">Wyślij</button>
+  </div>
+
+  <script>
+    // Połączenie z serwerem WebSocket
+    const socket = new WebSocket('ws://localhost:3000');
+
+    // Obsługa odebranych wiadomości
+    socket.onmessage = (event) => {
+      const blob = event.data; // Odebrane dane jako Blob
+      
+      const reader = new FileReader();
+      reader.onload = () => {
+        const message = document.createElement('p');
+        message.textContent = reader.result; // Konwersja danych na tekst
+        document.getElementById('chat').appendChild(message); // Wyświetlanie wiadomości
+      };
+      reader.readAsText(blob); // Czytaj dane jako tekst
+    };
+
+    // Wysyłanie wiadomości po kliknięciu przycisku
+    document.getElementById('sendButton').addEventListener('click', () => {
+      const messageInput = document.getElementById('messageInput');
+      const message = messageInput.value;
+      if (message) {
+        socket.send(message); // Wysyłanie wiadomości do serwera
+        messageInput.value = ''; // Czyszczenie pola wejściowego
+      }
+    });
+  </script>
+</body>
+</html>

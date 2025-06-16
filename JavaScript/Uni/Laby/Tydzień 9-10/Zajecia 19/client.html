@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacje o systemie</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Informacje o systemie</h1>
+
+        <div id="system-info" class="box">
+            <h2>Dane o systemie</h2>
+            <div id="system-details">Ładowanie danych...</div>
+        </div>
+
+        <div id="network-info" class="box">
+            <h2>Informacje o interfejsach sieciowych</h2>
+            <div id="network-details">Ładowanie danych...</div>
+        </div>
+
+        <div id="files-info" class="box">
+            <h2>Informacje o bieżącym katalogu</h2>
+            <div id="files-details">Ładowanie danych...</div>
+        </div>
+    </div>
+
+    <script>
+        // Funkcja do pobierania danych z API
+        async function fetchData(endpoint, callback) {
+            try {
+                const response = await fetch(`http://localhost:3000/api/${endpoint}`);
+                const data = await response.json();
+                callback(data);
+            } catch (error) {
+                console.error("Błąd w pobieraniu danych:", error)
+            }
+        }
+
+
+        function displaySystemInfo(data){
+            const container = document.getElementById('system-info');
+            container.innerHTML = `
+            <ul>
+                <li><strong>Typ Systemu:</strong>${data.osType}</li>
+                <li><strong>Platforma:</strong>${data.platform}</li>
+                <li><strong>Wersja Jądra:</strong>${data.kernelVersion}</li>
+                <li><strong>Arch:</strong>${data.architecture}</li>
+                <li><strong>Nazwa hosta:</strong>${data.hostmane}</li>
+                <li><strong>RAM(Całkowity):</strong>${data.totalMemory}</li>
+                <li><strong>RAM(Wolny):</strong>${data.freeMemory}</li>
+                <li><strong>Czas działania:</strong>${data.uptime}</li>
+            </ul>
+            <h3>Procesory:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rdzeń</th>
+                        <th>Model</th>
+                        <th>Prędkość</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${data.cpus.map(cpu => `
+                        <tr>
+                            <td>${cpu.core}</td>
+                            <td>${cpu.model}</td>  
+                            <td>${cpu.speed}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        `;
+        }
+        function displayNetworkInfor(data){
+            const container = document.getElementById('network-details');
+            container.innerHTML = data.map(iface =>`
+            <h3>${iface.interface}<h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Rodzina</td>
+                        <td>Adres</td>
+                        <td>MAC</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${iface.address.map(adr =>`
+                        <tr></tr>
+                    `).join('')}
+                </tbody>
+            </table>
+            `).join('');
+        }
+
+        // Pobieranie danych z API
+        fetchData('system-info', displaySystemInfo);
+        fetchData('network-stats', 'network-info');
+        fetchData('files', 'files-info');
+    </script>
+</body>
+</html>

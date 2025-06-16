@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Fetch</title>
+</head>
+<body>
+  <h1>TypeScript Client-Server Example</h1>
+  <button id="getAllUsers">Get All Users</button>
+  <button id="getUserById">Get User by ID</button>
+  <button id="checkIsActive">Check if User is Active</button>
+  <div id="output"></div>
+  
+  <script>
+    const output = document.getElementById('output');
+
+    document.getElementById('getAllUsers').addEventListener('click', async () => {
+      const res = await fetch('/users');
+      const data = await res.json();
+      output.innerHTML = JSON.stringify(data, null, 2);
+    });
+
+    document.getElementById('getUserById').addEventListener('click', async () => {
+      const id = prompt('Enter User ID:');
+      const res = await fetch(`/users/${id}`);
+      const data = await res.json();
+      output.innerHTML = JSON.stringify(data, null, 2);
+    });
+
+    document.getElementById('checkIsActive').addEventListener('click', async () => {
+      const id = prompt('Enter User ID:');
+      const res = await fetch(`/users/${id}/isActive`);
+      const data = await res.json();
+      output.innerHTML = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>

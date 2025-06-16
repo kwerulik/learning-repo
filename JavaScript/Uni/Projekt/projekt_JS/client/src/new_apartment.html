@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Nowy apartament</title>
+</head>
+<body>
+    
+    <div class="grid-container">
+        <div class="logo"><a href="main.html">Rezerwuje.com</a></div>
+    </div>
+    
+    <div class="container-reservation">
+        <h1>Rezerwacja</h1>
+        <form class="rezervatiion-form" acction="#" method="POST">
+            <div>
+                <label for="name">Nazwa apartamn</label>
+                <input type="text" id="name" name="name" placeholder="Nazwa apartamentu" required>
+            </div>
+
+            <div>
+                <label for="image">Zdjęcie apartamentu</label>
+                <input type="text" id="image" name="image" placeholder="Ścieżka do zdjęcia" required>
+            </div>
+
+            <div>
+                <label for="description">Opis apartamentu</label>
+                <input type="description" id="description" name="description" placeholder="Opis apartamentu" required>
+            </div>
+
+            <div>
+                <label for="price">Cena za noc</label>
+                <input type="number" id="price" name="price" placeholder="Cena za noc" required>
+            </div>
+
+            <div>
+                <label for="rooms">Ilość pokoji</label>
+                <input type="number" id="rooms" name="rooms" placeholder="Ilość pokoji" required>
+            </div>
+            <div>
+                <label for="adults">Ilość dorosłych</label>
+                <input type="number" id="adults" name="adults" placeholder="Ilość dorosłych" required>
+            </div>
+            <div>
+                <label for="children">Ilość dzieci</label>
+                <input type="number" id="children" name="children" placeholder="Ilość dzieci" required>
+            </div>
+            <div>
+                <label for="lat">Latitude</label>
+                <input type="text" id="lat" name="lat" placeholder="Latitude" required>
+            </div>
+            <div>
+                <label for="lon">Longitude</label>
+                <input type="text" id="lon" name="lon" placeholder="Longitude" required>
+            </div>
+            <div>
+                <label for="city">Miejscowość apartamentu</label>
+                <select name="city" id="city" required>
+                    <option value="" disabled selected>Wybierz miejscowość</option>
+                    <option value="warszawa">Warszawa</option>
+                    <option value="krakow">Kraków</option>
+                    <option value="gdynia">Gdynia</option>
+                  </select>
+            </div>
+
+            <button type="submit">Zarezerwuj</button>
+        </form>
+    </div>    
+   
+    <script src="../scripts/new_apatment.js"></script>
+</body>
+</html>

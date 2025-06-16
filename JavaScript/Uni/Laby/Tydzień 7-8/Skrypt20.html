@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Testowanie API</title>
+</head>
+<body>
+    <h2>Odpowiedź z API:</h2>
+    <pre id="response"></pre>
+
+    <script>
+        // URL endpointu API
+        const endpoint = 'http://localhost/index.php';
+
+        // Wysłanie żądania do API
+        fetch(endpoint)
+            .then(response => response.json())
+            .then(data => {
+                // Wyświetlenie odpowiedzi na stronie
+                const name = data.data.name;
+                const email = data.data.email;
+
+                // Wyświetlenie tych danych na stronie
+                const responseElement = document.getElementById('response');
+                responseElement.textContent = `Imie: ${name}\nEmail: ${email}`;
+            })
+            .catch(error => {
+                console.error('Błąd:', error);
+            });
+    </script>
+</body>
+</html>
+<!-- <?php
+// Ustawienie nagłówków HTTP
+header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
+
+// Ścieżka do pliku tekstowego
+$filePath = 'text.txt';
+
+// Sprawdzenie metody żądania
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    // Otwórz plik
+    if (file_exists($filePath) && $file = fopen($filePath, "r")) {
+        // Odczytaj dane z pliku
+        $name = fgets($file);
+        $email = fgets($file); 
+        fclose($file); // Zamknij plik
+
+        // Zwrócenie danych w odpowiedzi
+        echo json_encode([
+            "status" => "success",
+            "data" => [
+                "name" => $name,
+                "email" => $email
+            ]
+        ]);
+    } else {
+        // Obsługa błędu otwarcia pliku
+        echo json_encode([
+            "status" => "error",
+            "message" => "Nie udało się otworzyć pliku"
+        ]);
+    }
+} else {
+    http_response_code(405); // Metoda niedozwolona
+    echo json_encode(["status" => "error", "message" => "Method not allowed"]);
+} -->

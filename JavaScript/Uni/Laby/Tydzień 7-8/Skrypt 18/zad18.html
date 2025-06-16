@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<?php
+
+	$badwords = ["Ala", "Ma", "Kota"];
+
+	$txt = "Ala ma kota";
+	
+	echo "$txt";
+
+	function cenzura($txt, $badwords){		
+		$words = explode(" ", $txt);
+
+		for($i; $i < count($words); $i ++){
+			for($j; $j < count($badwords); $j ++){
+				if ($i == $j){
+					$i = $j;
+				}
+			}
+		}
+	}
+
+	cenzura($txt, $badwords);
+?>
+
+</body>
+</html>

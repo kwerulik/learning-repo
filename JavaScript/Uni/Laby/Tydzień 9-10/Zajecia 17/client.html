@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="clientForm">
+        <label for="name">Imię:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="surname">Nazwisko:</label>
+        <input type="text" id="surname" name="surname" required><br><br>
+        
+        <label for="address">Adres:</label>
+        <input type="text" id="address" name="address" required><br><br>
+        
+        <label for="course">Kierunek:</label>
+        <input type="text" id="course" name="course" required><br><br>
+        
+        <label for="group">Grupa:</label>
+        <input type="text" id="group" name="group" required><br><br>
+        
+        <button type="submit">Wyślij</button><br><br>
+    </form>
+    <h1>Odpowiedź serwera:</h1><br>
+    <pre id="response"></pre>
+
+    <script>   
+        document.getElementById('dataForm').addEventListener('submit', async (event) => { 
+        event.preventDefault(); // Zatrzymanie domyślnego działania formularza 
+        const formData = new FormData(event.target);
+        const data = { 
+            name: formData.get('name'), 
+            surname: formData.get('surname'), 
+            address: formData.get('address') 
+        };
+
+        const response = await fetch('http://localhost:3000/submit', { 
+            method: 'POST', 
+            headers: { 'Content-Type': 'application/json' }, 
+            body: JSON.stringify(data) }); 
+            const result = await response.text(); 
+            alert(result); // Wyświetlenie odpowiedzi serwera
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+       var map = L.map('map').setView([52.0649516,19.4331154], 6); 
+
+       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://danepubliczne.imgw.pl/api/data/meteo/", true);
+
+        xhr.onload = function () {
+            if (xhr.status == 200){
+                var data = JSON.parse(xhr.responseText);
+                var counter = 0;
+                x = getRandomInt(692)
+                console.log(x);
+                data.forEach(function (station) {
+                if (counter < x && station.lat && station.lon) {   
+                    var marker = L.marker([station.lat, station.lon]).addTo(map);         
+                    //console.log(station);
+                    marker.bindPopup(`
+                        <b>Stacja: ${station.nazwa_stacji}</b><br>
+                        Temperatura gruntu: ${station.temperatura_gruntu} °C<br>
+                        Kierunek Wiatru: ${station.wiatr_kierunek} hPa<br>
+                        Prędkość Wiatru: ${station.wiatr_srednia_predkosc} m/s
+                    `);
+                            counter++;
+                        }
+                    });
+                } 
+                else {
+                    console.error("Error fetching data from the API.");
+                }
+                console.log(counter);
+            };
+        xhr.send();
+    </script>
+</body>
+</html>
+

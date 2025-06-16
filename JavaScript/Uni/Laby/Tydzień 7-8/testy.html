@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Klienta</title>
+</head>
+<body>
+    <h2>Wprowadź dane</h2>
+    <form id="dataForm">
+        <label for="firstname">Imię:</label>
+        <input type="text" id="firstname" name="firstname" required>
+        <label for="lastname">Nazwisko:</label>
+        <input type="text" id="lastname" name="lastname" required>
+        <label for="address">Adres:</label>
+        <input type="text" id="address" name="address" required>
+        <button type="submit">Wyślij</button>
+    </form>
+
+    <p id="response"></p>
+
+    <script>
+
+        const endpoint = 'http://localhost/index.php'; // Ścieżka do serwera
+
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+
+            fetch(endpoint, {
+                method: 'POST',
+                body: formData
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(result) {
+                document.getElementById('response').textContent = result.message;
+            })
+            .catch(function(error) {
+                console.error('Błąd:', error);
+                document.getElementById('response').textContent = 'Wystąpił błąd podczas zapisu danych.';
+            });
+        });
+
+
+    </script>
+</body>
+</html>

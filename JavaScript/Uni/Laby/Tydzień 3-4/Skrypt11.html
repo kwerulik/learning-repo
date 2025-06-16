@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="Strypt11.css"/>
+</head>
+<body>
+    <div id="map"></div>
+</body>
+    
+<script>
+        var map = L.map('map').setView([54.44253, 18.555822], 15);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        var wzr = L.marker([54.442402, 18.555812]).addTo(map);
+        wzr.bindPopup("Wydział Zarządzania");
+
+        var budC = L.marker([54.4449239, 18.5531884]).addTo(map);
+        budC.bindPopup("Centrum Dydaktyczne");
+
+        var ekon = L.marker([54.445178, 18.554948]).addTo(map);
+        ekon.bindPopup("Wydział ekonomiczny");
+
+        var circle = L.circle([54.444776, 18.55719], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 70
+        }).addTo(map);
+        circle.bindPopup("Komisariat Policji");
+
+        var parkingStud = L.polygon([
+            [54.445431, 18.553065],
+            [54.445031, 18.553188],
+            [54.444953, 18.552872],
+            [54.444782, 18.552625],
+            [54.445459, 18.552421]
+        ]).addTo(map);
+
+        var parkingWyk = L.polygon([
+            [54.445137, 18.55321],
+            [54.445144, 18.553387],
+            [54.445406, 18.553317],
+            [54.445381, 18.553151]
+        ], {
+            color: 'red'
+        }).addTo(map);
+        
+
+</script>   
+</html>
