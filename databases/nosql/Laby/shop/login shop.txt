@@ -1,0 +1,4 @@
+login: shop
+hasło: shop123
+
+mongodb+srv://shop:<db_password>@kwerulik.p673c.mongodb.net/?retryWrites=true&w=majority&appName=kwerulik
