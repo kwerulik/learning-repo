@@ -9,7 +9,23 @@ It includes work from:
 
 ## 📂 Folder Structure
 
-<pre lang="markdown"> ```plaintext 📁 Folder Structure learning-repo/ ├── html/ │ ├── course/ # online course │ └── Uni/ # university ├── JavaScript/ │ ├── course/ │ └── Uni/ ├── React/ # university ├── basics-csharp-python/ # university │ ├── Python/ │ └── C#/ ├── databases/ │ ├── nosql/ │ └── sql/ └── README.md ``` </pre>
+```plaintext
+📁 learning-repo/
+├── 📁 html/
+│   ├── 📁 course/             # online course
+│   └── 📁 Uni/                # university
+├── 📁 JavaScript/
+│   ├── 📁 course/             # online course
+│   └── 📁 Uni/                # university
+├── 📁 React/                  # university
+├── 📁 basics-csharp-python/   # university
+│   ├── 📁 Python/
+│   └── 📁 C#/
+├── 📁 databases/              # university
+│   ├── 📁 nosql/
+│   └── 📁 sql/
+└── 📄 README.md
+```
 
 ## 🧭 Folder Descriptions
 
@@ -17,9 +33,9 @@ It includes work from:
 |-------------------------|----------------------------------------------------------|
 | `JS/course/`            | JavaScript exercises from online tutorials and courses   |
 | `JS/Uni/`               | JavaScript assignments from university classes           |
-| `React/`                | React projects and exercises (university-based)   |
+| `React/`                | React projects and exercises (university-based)          |
 | `basics-csharp-python/` | Introductory labs in Python and C#                       |
-| `html/course/`          | HTML basics and course-based exercises                   |
+| `html`                  | HTML basics from university and online courses           |
 | `databases/`            | Database-related assignments, including NoSQL projects   |
 
 ## 🌱 Topics Covered
