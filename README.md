@@ -2,35 +2,15 @@
 
 This repository contains coding exercises and small projects I've completed while learning different programming languages and technologies.
 
-## 📁 Project Structure
+It includes work from:
+- 📚 **Online courses** (`JS/course/`, `html/course`)
+- 🎓 **University classes** (`JS/Uni/`, `basics-csharp-python/`,  `React/`, `basics-csharp-python`...)
 
 
-- `tutorials/`: tasks and code from online courses
-- `university/`: assignments and projects from my university studies
-
-## 🎯 Purpose
-
-These projects were developed to:
-
-- Understand the basics of HTML and CSS.
-- Practice JavaScript fundamentals.
-- Learn DOM manipulation and event handling.
-- Gain experience with responsive design principles.
-- Familiarize with version control using Git and GitHub.
-
-## 🏷️ Topics
-
-To categorize this repository and make it more discoverable, consider adding the following topics:
-
-- `html`
-- `css`
-- `javascript`
-- `web-development`
-- `learning`
-- `student-project`
-- `frontend`
-
-1. Navigate to your repository on GitHub.
-2. Click on the "Settings" tab.
-3. In the "Topics" section, type each topic and press Enter.
-4. Changes are saved automatically.
+| Folder                  | Description                                               |
+|-------------------------|-----------------------------------------------------------|
+| `JS/course/`            | JavaScript exercises from online tutorials and courses    |
+| `JS/Uni/`               | JavaScript coursework from university classes             |
+| `React/`                | React projects and exercises from university              |
+| `basics-csharp-python/` | Introductory labs and exercises in C# and Python          |
+| `databases/`            | University projects, labs and exercises databases         |
