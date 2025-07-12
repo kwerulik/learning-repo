@@ -8,5 +8,7 @@ while True:
         print(roll)
     elif choice.lower() == 'n':
         break
+    else:
+        print('Invalid choice')
 
 print('Thanks for playing')
