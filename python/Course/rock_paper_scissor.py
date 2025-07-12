@@ -1,6 +1,7 @@
 import random
 
-while True:
+
+def get_computer_choice():
     random_number = random.randint(0, 2)
     if random_number == 0:
         computer_move = 'r'
@@ -8,8 +9,24 @@ while True:
         computer_move = 'p'
     elif random_number == 2:
         computer_move = 's'
+    return computer_move
 
-    player_move = input('Rock, paper or scissors? (r, p, s)').lower()
+
+def get_user_choice():
+    choices = ('r', 'p', 's')
+    while True:
+        player_move = input('Rock, paper or scissors? (r, p, s)').lower()
+        if player_move not in choices:
+            print('Invalid input')
+            continue
+        else:
+            break
+    return player_move
+
+
+while True:
+    computer_move = get_computer_choice()
+    player_move = get_user_choice()
 
     if player_move == 's':
         print("You chose scissors")
